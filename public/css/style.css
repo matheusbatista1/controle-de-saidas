@@ -1,139 +1,161 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #ecf1f4;
-    text-transform: uppercase;
-  }
-  .container {
-    max-width: 350px;
-    margin: 50px auto;
-    padding: 40px;
-    border-radius: 25px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: 450px;
-    background-color: #2f2f2f;
-  }
-  .container p {
-    margin: 10px 0;
-    font-family: 'Nunito', sans-serif;
-  }
-  .obra {
-    font-size: 14px;
-    color: #a0a0a0;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-  .registro {
-    color: #ff7e0f;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: bold; 
-  }
-  h1 {
-    font-family: 'Quicksand', sans-serif;
-    font-weight: bold; 
-    font-size: 30px;
-    color: #ffffc3;
-    margin: 30px 0;
-    text-align: center;
-  }
-  select,
-  input[type="number"],
-  button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    font-size: 16px;
-    box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
-  }
-  input[type="number"]::-webkit-inner-spin-button,
-  input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    appearance: none;
-    margin: 0;
-  }
-  input,
-  select {
-    background-color: #9f979c;
-    border: none !important;
-  }
-  .custom-select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-image: url('./svg/seta_laranja_50x50.svg');
-    background-repeat: no-repeat;
-    background-position: calc(100% - 10px) center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #ecf1f4;
+  text-transform: uppercase;
+}
 
-    padding-right: 20px;
-    }
-      button {
-    background-color: #ff7e0f;
-    color: white;
-    cursor: pointer;
-    border-radius: 10px;
-    border: none;
-    transition: all 0.5s;
-    font-family: 'Comfortaa', cursive;
+.container {
+  max-width: 350px;
+  margin: 50px auto;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 450px;
+  background-color: #2f2f2f;
+}
+
+.container p {
+  margin: 10px 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+.obra {
+  font-size: 14px;
+  color: #a0a0a0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.registro {
+  color: #ff7e0f;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  color: #ffffc3;
+  margin: 30px 0;
+  text-align: center;
+}
+
+select,
+input[type="number"],
+button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 16px;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+input,
+select {
+  background-color: #9f979c;
+  border: none !important;
+}
+
+.custom-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('./svg/seta_laranja_50x50.svg');
+  background-repeat: no-repeat;
+  background-position: calc(100% - 10px) center;
+
+  padding-right: 20px;
+}
+
+button {
+  background-color: #ff7e0f;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.5s;
+  font-family: 'Comfortaa', cursive;
+}
+
+button:hover {
+  background-color: #d6681e;
+  transition: all 0.5s;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: black;
+  font-size: 13px;
+}
+
+.status {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.valid {
+  color: green !important;
+}
+
+.invalid {
+  color: red !important;
+}
+
+.neutro {
+  color: rgb(105, 105, 105);
+}
+
+.copy {
+  text-align: center;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 10px;
+}
+
+.copy .social {
+  margin: 20px;
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 25px;
   }
-  button:hover {
-    background-color: #d6681e;
-    transition: all 0.5s;
+
+  .container p {
+    font-size: 14px;
   }
-  button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
+
+  .copy p {
+    font-size: 9px !important;
   }
-  .popup {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.9);
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 5px;
-    z-index: 1000;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    color: black;
-    font-size: 13px;
-  }
-  .status {
-    margin-top: 5px;
-    margin-bottom: 10px;
-    font-size: 12px;
-  }
-  .valid {
-    color: green !important;
-  }
-  .invalid {
-    color: red !important;
-  }
-  .neutro {
-    color: rgb(105, 105, 105);
-  }
-  .copy {
-    text-align: center;
-    margin-top: 20px;
-    color: #fff;
-    font-size: 10px;
-  }
-  .copy .social {
-    margin: 20px;
-  }
-  @media (max-width: 500px) {
-    h1{
-      font-size: 25px;
-    }
-    .container p{
-      font-size: 14px;
-    }
-    .copy p{
-      font-size: 9px !important;
-    }
-  }
+}
