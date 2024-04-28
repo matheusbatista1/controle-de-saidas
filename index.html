@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" type="image/png" href="./favicon/control-lun-outline-badged-svgrepo-com.ico"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./public/css/style.css">
+<title>Controle de Saídas</title>
+</head>
+<body>
+<div class="container">
+  <p class="obra">OBRA DER-CE RP GUAPIAÇU SP-425</p>
+  <h1><span class="registro">Registro</span> de Saídas</h1>
+  <form>
+    <p>Item:</p>
+    <select class="custom-select" id="itemSelect" onchange="updateStock()">
+      <option value="">Selecione um item</option>
+      <option value="AÇÚCAR">AÇÚCAR</option>
+          <option value="ÁGUA SANITÁRIA">ÁGUA SANITÁRIA</option>
+          <option value="BALDE">BALDE</option>
+          <option value="CAFÉ">CAFÉ</option>
+          <option value="COPO DESCARTÁVEL">COPO DESCARTÁVEL</option>
+          <option value="DESINFETANTE">DESINFETANTE</option>
+          <option value="DETERGENTE">DETERGENTE</option>
+          <option value="DETERGENTE 5LTS">DETERGENTE 5LTS</option>
+          <option value="ESCOVA SANITÁRIA">ESCOVA SANITÁRIA</option>
+          <option value="ESPONJA DE LOUÇA">ESPONJA DE LOUÇA</option>
+          <option value="FLANELA">FLANELA</option>
+          <option value="GALÃO DE ÁLCOOL">GALÃO DE ÁLCOOL</option>
+          <option value="GALÃO DE SABONETE">GALÃO DE SABONETE</option>
+          <option value="LÂMPADA">LÂMPADA</option>
+          <option value="LEITE">LEITE</option>
+          <option value="PALHA DE AÇO">PALHA DE AÇO</option>
+          <option value="PÁ DE LIXO">PÁ DE LIXO</option>
+          <option value="PANO DE CHÃO">PANO DE CHÃO</option>
+          <option value="PAPEL HIGIÊNICO">PAPEL HIGIÊNICO</option>
+          <option value="RODO">RODO</option>
+          <option value="SABÃO EM BARRA">SABÃO EM BARRA</option>
+          <option value="SABÃO EM PÓ">SABÃO EM PÓ</option>
+          <option value="SACO DE LIXO 20L">SACO DE LIXO 20L</option>
+          <option value="SACO DE LIXO 100L">SACO DE LIXO 100L</option>
+          <option value="SACO DE LIXO 200L">SACO DE LIXO 200L</option>
+          <option value="SAPOLIO">SAPOLIO</option>
+          <option value="VASSOURA">VASSOURA</option>
+          <option value="VEJA">VEJA</option>
+          <option value="VENENO">VENENO</option>
+        </select>
+        <p>Quantidade retirada:</p>
+        <input
+          type="number"
+          id="retiradaInput"
+          min="1"
+          step="1"
+          oninput="updateStock()"
+        />
+        <div id="estoqueStatus" class="status"></div>
+        <button type="button" id="verificarBtn" onclick="verificarEstoque()">
+          Registrar
+        </button>
+      </form>
+      <div class="copy">
+        <p style="font-family: 'Nunito', sans-serif; font-size: 10px;">© 2024 - All rights reserved - Matheus dos Santos Batista</p>
+        <p class="social">
+          <a target="_blank" href="https://www.linkedin.com/in/matheusbatista1998/"><object type="image/svg+xml" data="./svg/linkedin-svgrepo-com.svg" style="margin: 5px" width="17" height="17"></object></a>
+          <a target="_blank" href="https://github.com/matheusbatista1"><object type="image/svg+xml" data="./svg/github-142-svgrepo-com.svg" style="margin: 5px" width="17" height="17"></object></a>
+        </p>
+      </div>
+    </div>
+    <div id="popup" class="popup"></div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
